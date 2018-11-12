@@ -42,6 +42,11 @@ mat-grid-list.moves {
     background-color: rgba(map-get($brt-primary, 400), 0.1);
     border-radius: 4px;
   }
+
+  label{
+    position: absolute;
+    bottom: 1px;
+  }
 }
 
 .btnRouter {

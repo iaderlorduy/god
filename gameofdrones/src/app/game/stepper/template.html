@@ -8,9 +8,17 @@
       <mat-card-subtitle>
         The game of Rock, Paper, Scissors is very simple. Each player picks one of the three objects and these rules
         are applied to see who has won that round:
-        Paper wraps (beats) Rock
-        Scissors cut (beat) Paper
-        Rock blunts (beats) Scissors
+        <p>
+          <strong>
+            Paper wraps (beats) Rock,
+          </strong>
+          <strong>
+            Scissors cut (beat) Paper,
+          </strong>
+          <strong>
+            Rock blunts (beats) Scissors,
+          </strong>
+        </p>
         The challenge of the game is to guess what your opponent will choose and pick the appropriate object to beat
         them.
       </mat-card-subtitle>
@@ -45,6 +53,17 @@
         <div *ngIf="game.playerPlaying == 2">
           Turn of player 2 : <b>{{game.player2Name}}</b>, make your move
         </div>
+        <p>Note:
+          <strong>
+            Paper wraps (beats) Rock, 
+          </strong>
+          <strong>
+            Scissors cut (beat) Paper, 
+          </strong>
+          <strong>
+            Rock blunts (beats) Scissors
+          </strong>
+        </p>
       </mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
@@ -52,14 +71,17 @@
         <mat-grid-tile [ngClass]="{'active' : move == 'rock'}">
           <img (click)="move = 'rock'" class="img_move" mat-card-image src="../../../assets/images/if_hand-rock-o_1608372.png"
             alt="rock icon">
+            <label>Rock</label>
         </mat-grid-tile>
         <mat-grid-tile [ngClass]="{'active' : move == 'paper'}">
           <img (click)="move = 'paper'" class="img_move" mat-card-image src="../../../assets/images/if_hand-stop-o_1608369.png"
             alt="papel icon">
+            <label>Paper</label>
         </mat-grid-tile>
         <mat-grid-tile [ngClass]="{'active' : move == 'scissors'}">
           <img (click)="move = 'scissors'" class="img_move" mat-card-image src="../../../assets/images/if_hand-scissors-o_1608371.png"
             alt="scissors icon">
+            <label>Scissors</label>
         </mat-grid-tile>
       </mat-grid-list>
     </mat-card-content>
@@ -75,7 +97,8 @@
       </mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <h2>PLAYER WINNER IS: </h2> <h1>{{game.playerWinner}}</h1>
+      <h2>PLAYER WINNER IS: </h2>
+      <h1>{{game.playerWinner}}</h1>
     </mat-card-content>
     <mat-card-actions>
       <button mat-raised-button color="primary" (click)="playAgain()">PLAY AGAIN</button>
