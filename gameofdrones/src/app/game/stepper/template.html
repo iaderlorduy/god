@@ -75,7 +75,7 @@
       </mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      PLAYER WINNER IS {{game.playerWinner}}
+      <h2>PLAYER WINNER IS: </h2> <h1>{{game.playerWinner}}</h1>
     </mat-card-content>
     <mat-card-actions>
       <button mat-raised-button color="primary" (click)="playAgain()">PLAY AGAIN</button>
@@ -92,10 +92,10 @@
             </mat-card-title>
           </mat-card-header>
           <mat-card-content style="text-align: left">
-            <p>Move player 1: {{s.moveplayer1}}</p>
-            <p>Move player 2: {{s.moveplayer2}}</p>
-            <p>Move winner: {{s.moveWinner}}</p>
-            <p>Winner: {{s.playerWinner}}</p>
+            <p><b>Move player 1:</b> <i>{{s.moveplayer1}}</i></p>
+            <p><b>Move player 2:</b> <i> {{s.moveplayer2}}</i></p>
+            <p><b>Move winner:</b> <i> {{s.moveWinner}}</i></p>
+            <p><b>Winner:</b> <i> {{s.playerWinner}}</i></p>
           </mat-card-content>
         </mat-card>
       </div>

@@ -1,34 +1,3 @@
-/**
- * Color palette (default)
- *
- */
-
- $palette: (
-    // Primary colors
-    primary-1:   #270526,
-    primary-2:   #502d4e,
-    primary-3:   #7d577a,
-  
-    // Secondary colors
-    secondary-1: #00838f,
-    secondary-2: #005662,
-    secondary-3: #bbdefb,
-  
-    // Success/warning/error colors
-    success:     #1b5e20,
-    warning:     #f9a825,
-    danger:      #ad1457,
-  
-    // Neutral shade colors
-    shade-1:     #212121,
-    shade-2:     #323232,
-    shade-3:     #757575,
-    shade-4:     #e0e0e0,
-    shade-5:     #eaeef1,
-    shade-6:     #ffffff,
-    shade-7:     #ece8ec,
-  ) !default;
-  
 
   /**
  * Layout (responsive breakpoints)

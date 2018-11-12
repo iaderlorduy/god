@@ -45,64 +45,6 @@ router.get('/game', (req, res) => {
     });
 });
 
-/*
 
-//get game/:id
-//GET localhost:3000/game
-router.get('/game/:id', (req, res) => {
-  if (!req.params.id) {
-    return res.status(HttpStatus.BAD_REQUEST).send('Missing URL parameter: id');
-  }
-  GameModel.findOne({
-    _id: req.params.id
-  })
-    .then(doc => {
-      res.json(doc);
-    })
-    .catch(err => {
-      res.status(HttpStatus.INTERNAL_SERVER_ERROR).json(err);
-    });
-});
-
-
-//Create a new game
-//PUT localhost:3000/game
-// query param email
-router.put('/game', (req, res) => {
-  if (!req.query.email) {
-    return res.status(HttpStatus.BAD_REQUEST).send('Missing URL parameter: email');
-  }
-  GameModel.findOneAndUpdate({
-    email: req.query.email
-  }, req.body, {
-      new: true
-    })
-    .then(doc => {
-      res.json(doc);
-    })
-    .catch(err => {
-      res.status(HttpStatus.INTERNAL_SERVER_ERROR).json(err);
-    });
-});
-
-//Create a new game
-//DELETE localhost:3000/game
-// query param email
-router.delete('/game', (req, res) => {
-  if (!req.query.email) {
-    return res.status(HttpStatus.BAD_REQUEST).send('Missing URL parameter: email');
-  }
-  GameModel.findOneAndRemove({
-    email: req.query.email
-  })
-    .then(doc => {
-      res.json(doc);
-    })
-    .catch(err => {
-      res.status(HttpStatus.INTERNAL_SERVER_ERROR).json(err);
-    });
-});
-
-*/
 
 module.exports = router;

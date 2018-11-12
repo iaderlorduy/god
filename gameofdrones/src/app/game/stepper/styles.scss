@@ -39,6 +39,8 @@ mat-card-content, mat-card-actions {
 mat-grid-list.moves {
   mat-grid-tile.active {
     border: 1px solid grey;
+    background-color: rgba(map-get($brt-primary, 400), 0.1);
+    border-radius: 4px;
   }
 }
 

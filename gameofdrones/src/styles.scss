@@ -30,7 +30,7 @@
  // Define the palettes for your theme using the Material Design palettes available in palette.scss
  // (imported above). For each palette, you can optionally specify a default, lighter, and darker
  // hue.
- $brt-app-primary: mat-palette($brt-primary, 500, A100, A400);
+ $brt-app-primary: mat-palette($brt-primary, 400, A100, A400);
  $brt-app-accent:  mat-palette($brt-accent, A200, A100, A400);
  // The warn palette is optional (defaults to red).
  $brt-app-warn:    mat-palette($brt-warn, A200, A100, A400);

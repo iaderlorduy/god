@@ -40,11 +40,14 @@ $table_sm_display: (
 
 mat-grid-list.records_header {
   font-size: .95rem;
-  font-weight: 500;
+  font-weight: 500;  
   color: rgba(0, 0, 0, 0.54);
   border-bottom: 1px solid #8080802b;
+  text-transform: uppercase;
 }
 
 mat-grid-list.records {
+  color: rgba(0, 0, 0, 0.54);
   border-bottom: 1px solid #8080802b;
+  font-weight: lighter;
 }
