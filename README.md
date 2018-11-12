@@ -37,4 +37,13 @@ Run `npm start-watch` for a dev server. Navigate to `http://localhost:3000/`. Th
 
     npm start -> just for a dev server
 
+## Deployment
+The both apps are deployed in  window azure.
+
+For the BackEnd we created a Node JS Empty Web App and the deployment is automatically when the repository is updated with a new commit.
+
+For the Frontend we create a basic web app and the deployment is manually with azure extension for VScode.
+
+#You can check the app in a live server -> https://v1frontapp.azurewebsites.net/#/game
+
 
