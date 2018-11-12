@@ -8,7 +8,7 @@ import { Match } from '../models/game';
 @Injectable()
 export class GameService {
 
-  baseUrl = "https://v1nodeapp.azurewebsites.net";//"http://localhost:3000"
+  baseUrl = "http://localhost:3000"
 
   constructor(
     private http: HttpClient,
