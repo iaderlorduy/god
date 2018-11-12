@@ -1,0 +1,37 @@
+<div class="content">
+  <a routerLink="/" class="btnRouter" mat-flat-button color="primary">Lest Play</a>
+  <div class="table">
+    <mat-grid-list class="records_header" cols="7" rowHeight="5:1">
+      <mat-grid-tile>#</mat-grid-tile>
+      <mat-grid-tile>Player 1</mat-grid-tile>
+      <mat-grid-tile>Score</mat-grid-tile>
+      <mat-grid-tile>player 2</mat-grid-tile>
+      <mat-grid-tile>Score</mat-grid-tile>
+      <mat-grid-tile>Winner</mat-grid-tile>
+      <mat-grid-tile>Date</mat-grid-tile>
+    </mat-grid-list>
+    <mat-grid-list class="records" cols="7" rowHeight="5:1" *ngFor="let match of Matchs; let i = index">
+      <mat-grid-tile><b>{{i}}</b></mat-grid-tile>
+      <mat-grid-tile>{{match.player1Name}}</mat-grid-tile>
+      <mat-grid-tile>{{match.scorePlayer1}}</mat-grid-tile>
+      <mat-grid-tile>{{match.player2Name}}</mat-grid-tile>
+      <mat-grid-tile>{{match.scorePlayer2}}</mat-grid-tile>
+      <mat-grid-tile>{{match.playerWinner}}</mat-grid-tile>
+      <mat-grid-tile>{{match.date | date}}</mat-grid-tile>
+    </mat-grid-list>
+  </div>
+  <div class="table_sm">
+    <mat-grid-list class="records_header"  rowHeight="5:1" cols="4">
+      <mat-grid-tile>#</mat-grid-tile>
+      <mat-grid-tile>Player 1</mat-grid-tile>
+      <mat-grid-tile>player 2</mat-grid-tile>
+      <mat-grid-tile>Winner</mat-grid-tile>
+    </mat-grid-list>
+    <mat-grid-list class="records" cols="4"  rowHeight="5:1" *ngFor="let match of Matchs; let i = index">
+      <mat-grid-tile><b>{{i}}</b></mat-grid-tile>
+      <mat-grid-tile>{{match.player1Name}}</mat-grid-tile>
+      <mat-grid-tile>{{match.player2Name}}</mat-grid-tile>
+      <mat-grid-tile>{{match.playerWinner}}</mat-grid-tile>
+    </mat-grid-list>
+  </div>
+</div>

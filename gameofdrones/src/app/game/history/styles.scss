@@ -1,0 +1,39 @@
+@import "../../../themes/defaults.scss";
+
+$table_display: (
+  default: none,
+  xxs: none,
+  xs: none,
+  sm: block,
+  md: block,
+  lg: block,
+  xl: block,
+  xxl: block
+) !default;
+
+$table_sm_display: (
+  default: block,
+  xxs: block,
+  xs: block,
+  sm: none,
+  md: none,
+  lg: none,
+  xl: none,
+  xxl: none
+) !default;
+
+.btnRouter {
+  margin-bottom: 12px;
+}
+
+.content {
+  padding: 12px;
+}
+
+.table {
+  @include responsive-rule(display, $table_display);
+}
+
+.table_sm {
+  @include responsive-rule(display, $table_sm_display);
+}

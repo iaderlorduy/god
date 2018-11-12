@@ -1,0 +1,358 @@
+/**
+ * Color palette (default)
+ *
+ */
+
+ $palette: (
+    // Primary colors
+    primary-1:   #270526,
+    primary-2:   #502d4e,
+    primary-3:   #7d577a,
+  
+    // Secondary colors
+    secondary-1: #00838f,
+    secondary-2: #005662,
+    secondary-3: #bbdefb,
+  
+    // Success/warning/error colors
+    success:     #1b5e20,
+    warning:     #f9a825,
+    danger:      #ad1457,
+  
+    // Neutral shade colors
+    shade-1:     #212121,
+    shade-2:     #323232,
+    shade-3:     #757575,
+    shade-4:     #e0e0e0,
+    shade-5:     #eaeef1,
+    shade-6:     #ffffff,
+    shade-7:     #ece8ec,
+  ) !default;
+  
+
+  /**
+ * Layout (responsive breakpoints)
+ *
+ */
+
+// Breakpoints
+$breakpoints: (
+  // Ultra large: UWQHD (3440x1440), UWQHD+ (3840x1600), UHD-1 (3840x2160), 4K (4096x2160)
+  xxl-min: 3440px,
+  xxl-max: 16768px,
+
+  // Extra large: WSXGA+ (1680x1050), HD (1920x1080), 2K (2048x1080), WUXGA (1920x1200), UWHD(2560x1080), WQHD(2560x1440), WQXGA(2560x1600), QSXGA (2560x2048)
+  xl-min:  1680px,
+  xl-max:  3439px,
+
+  // Large: 1366x768, SXGA+ (1400x1050), 1440x960, 1440x1080, 1600x900, UXGA (1600x1200)
+  lg-min:  1366px,
+  lg-max:  1679px,
+
+  // Medium: HD720 (1280x720), WXGA (1280x768), 1280x854, 1280x960, SXGA (1280x1024)
+  md-min:  1280px,
+  md-max:  1365px,
+
+  // Small: WVGA (800x480), SVGA (800x600), WVGA-N (854x480), PAL (1024x576), WSVGA (1024x600), XGA (1024x768), 1152x768, XGA+ (1152x864)
+  sm-min:  1024px,
+  sm-max:  1279px,
+
+  // Extra small: tablets, PAL* (768x576)
+  xs-min:  768px,
+  xs-max:  1023px,
+
+  // Ultra small : phones
+  xxs-min: 320px,
+  xxs-max: 767px,
+) !default;
+  
+  
+  
+  /**
+   * Font palette (default)
+   *
+   */
+  
+  $font-family: Roboto, "Helvetica Neue", sans-serif !default;
+  
+  
+  
+  /**
+   * Fonts mapping (default)
+   *
+   */
+  
+  // Default text
+  $font-default: (
+    family: $font-family,
+    weight: 400,
+    style:  normal,
+    size:   14px,
+  ) !default;
+  
+  // Main heading
+  $font-h1: map-merge(
+    $font-default,
+    (
+      weight: 500,
+      size: 16px,
+      xxl: (
+        size: 20px,
+      ),
+      xl: (
+        size: 20px,
+      ),
+      lg: (
+        size: 20px,
+      ),
+      md: (
+        size: 20px,
+      ),
+      // sm: (
+      //   size: 16px,
+      // ),
+      // xs: (
+      //   size: 16px,
+      // ),
+      // xxs: (
+      //   size: 16px,
+      // ),
+    )
+  ) !default;
+  
+  // Sub heading
+  $font-h2: map-merge(
+    $font-default,
+    (
+      xxl: (
+        size: 16px,
+      ),
+      xl: (
+        size: 16px,
+      ),
+      lg: (
+        size: 16px,
+      ),
+      md: (
+        size: 16px,
+      ),
+      // sm: (
+      //   size: 14px,
+      // ),
+      // xs: (
+      //   size: 14px,
+      // ),
+      // xxs: (
+      //   size: 14px,
+      // ),
+    )
+  ) !default;
+  
+  // Body text
+  $font-text: map-merge(
+    $font-default,
+    (
+      size: 13px,
+      xxl: (
+        size: 14px,
+      ),
+      xl: (
+        size: 14px,
+      ),
+      lg: (
+        size: 14px,
+      ),
+      md: (
+        size: 14px,
+      ),
+      // sm: (
+      //   size: 13px,
+      // ),
+      // xs: (
+      //   size: 13px,
+      // ),
+      // xxs: (
+      //   size: 13px,
+      // ),
+    )
+  ) !default;
+  
+  // Placeholder text
+  $font-placeholder: (
+    family: $font-family,
+    weight: 100,
+    style:  italic,
+    size:   14px,
+  ) !default;
+  
+  
+  
+  /**
+   * Material theme (default)
+   *
+   */
+  
+  $black-87-opacity: rgba(black, 0.87);
+  $white-87-opacity: rgba(white, 0.87);
+  $black-12-opacity: rgba(black, 0.12);
+  $white-12-opacity: rgba(white, 0.12);
+  $black-6-opacity:  rgba(black, 0.06);
+  $white-6-opacity:  rgba(white, 0.06);
+  
+  $brt-primary: (
+    50 : #e0ebf0,
+    100 : #b3cdda,
+    200 : #80acc2,
+    300 : #4d8ba9,
+    400 : #267296,
+    500 : #005984,
+    600 : #00517c,
+    700 : #004871,
+    800 : #003e67,
+    900 : #002e54,
+    A100 : #86bdff,
+    A200 : #53a2ff,
+    A400 : #2086ff,
+    A700 : #0778ff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+  
+  $brt-accent: (
+    50:   #ffffff,
+    100:  #ffffff,
+    200:  #fbfcfd,
+    300:  #fbfcfd,
+    400:  #f8fcff,
+    500:  #f2faff,
+    600:  #f0f9ff,
+    700:  #e7f4fd,
+    800:  #d5e8f7,
+    900:  #cbe4f8,
+    A100: #bbdefb,
+    A200: #00838f,
+    A400: #005662,
+    A700: #013238,
+    contrast: (
+      50:   $black-87-opacity,
+      100:  $black-87-opacity,
+      200:  $black-87-opacity,
+      300:  white,
+      400:  white,
+      500:  $white-87-opacity,
+      600:  $white-87-opacity,
+      700:  $white-87-opacity,
+      800:  $white-87-opacity,
+      900:  $white-87-opacity,
+      A100: $black-87-opacity,
+      A200: white,
+      A400: white,
+      A700: white,
+    )
+  );
+  
+  $brt-warn: (
+    50:   #ffebee,
+    100:  #ffcdd2,
+    200:  #ef9a9a,
+    300:  #e57373,
+    400:  #ef5350,
+    500:  #f44336,
+    600:  #e53935,
+    700:  #d32f2f,
+    800:  #c62828,
+    900:  #b71c1c,
+    A100: #e22b7e,
+    A200: #ad1457,
+    A400: #91114a,
+    A700: #5f0b31,
+    contrast: (
+      50:   $black-87-opacity,
+      100:  $black-87-opacity,
+      200:  $black-87-opacity,
+      300:  $black-87-opacity,
+      400:  $black-87-opacity,
+      500:  white,
+      600:  white,
+      700:  white,
+      800:  $white-87-opacity,
+      900:  $white-87-opacity,
+      A100: $black-87-opacity,
+      A200: white,
+      A400: white,
+      A700: white,
+    )
+  );
+  
+  
+  
+  /**
+ * Apply generic responsive rule.
+ *
+ * $key: rule key
+ * $value: rule values
+ *
+ *    default: value
+ *    xxs: value
+ *    xs:  value
+ *    sm:  value
+ *    md:  value
+ *    lg:  value
+ *    xl:  value
+ *    xxl: value
+ */
+
+@mixin responsive-rule($key, $value) {
+  #{$key}: map-get($value, default);
+
+  @media screen and (min-width: map-get($breakpoints, xxs-min)) and (max-width: map-get($breakpoints, xxs-max)) {
+    @if map-has-key($value, xxs) {
+      #{$key}: map-get($value, xxs);
+    }
+  }
+  @media screen and (min-width: map-get($breakpoints, xs-min)) and (max-width: map-get($breakpoints, xs-max)) {
+    @if map-has-key($value, xs) {
+      #{$key}: map-get($value, xs);
+    }
+  }
+  @media screen and (min-width: map-get($breakpoints, sm-min)) and (max-width: map-get($breakpoints, sm-max)) {
+    @if map-has-key($value, sm) {
+      #{$key}: map-get($value, sm);
+    }
+  }
+  @media screen and (min-width: map-get($breakpoints, md-min)) and (max-width: map-get($breakpoints, md-max)) {
+    @if map-has-key($value, md) {
+      #{$key}: map-get($value, md);
+    }
+  }
+  @media screen and (min-width: map-get($breakpoints, lg-min)) and (max-width: map-get($breakpoints, lg-max)) {
+    @if map-has-key($value, lg) {
+      #{$key}: map-get($value, lg);
+    }
+  }
+  @media screen and (min-width: map-get($breakpoints, xl-min)) and (max-width: map-get($breakpoints, xl-max)) {
+    @if map-has-key($value, xl) {
+      #{$key}: map-get($value, xl);
+    }
+  }
+  @media screen and (min-width: map-get($breakpoints, xxl-min)) and (max-width: map-get($breakpoints, xxl-max)) {
+    @if map-has-key($value, xxl) {
+      #{$key}: map-get($value, xxl);
+    }
+  }
+}

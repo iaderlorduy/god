@@ -1,0 +1,154 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~flexboxgrid/css/flexboxgrid.css";
+
+
+/**
+ * A collection of HTML element and attribute style-normalizations.
+ *
+ * https://github.com/necolas/normalize.css
+ */
+
+ @import "normalize";
+
+
+
+ /**
+  * Default variables and definitions
+  */
+ 
+ @import 'themes/defaults';
+ 
+ 
+ /**
+  * Angular material design
+  *
+  * https://material.angular.io/
+  */
+ 
+ @import '~@angular/material/theming';
+ @include mat-core();
+ // Define the palettes for your theme using the Material Design palettes available in palette.scss
+ // (imported above). For each palette, you can optionally specify a default, lighter, and darker
+ // hue.
+ $brt-app-primary: mat-palette($brt-primary, 500, A100, A400);
+ $brt-app-accent:  mat-palette($brt-accent, A200, A100, A400);
+ // The warn palette is optional (defaults to red).
+ $brt-app-warn:    mat-palette($brt-warn, A200, A100, A400);
+ // Create the theme object (a Sass map containing all of the palettes).
+ $brt-app-theme:   mat-light-theme($brt-app-primary, $brt-app-accent, $brt-app-warn);
+ // Include theme styles for core and each component used in your app.
+ // Alternatively, you can import and @include the theme mixins for each component
+ // that you are using.
+ @include angular-material-theme($brt-app-theme);
+ 
+ 
+ 
+ /**
+  * Font family (Roboto)
+  *
+  */
+ 
+ @font-face {
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 300;
+   src: local('Roboto Light'), local('Roboto-Light'), url('assets/fonts/Roboto-Light.ttf') format('truetype');
+ }
+ @font-face {
+   font-family: 'Roboto';
+   font-style: italic;
+   font-weight: 300;
+   src: local('Roboto Light Italic'), local('Roboto-LightItalic'), url('assets/fonts/Roboto-LightItalic.ttf') format('truetype');
+ }
+ 
+ @font-face {
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+   src: local('Roboto'), local('Roboto-Regular'), url('assets/fonts/Roboto-Regular.ttf') format('truetype');
+ }
+ // @font-face {
+ //   font-family: 'Roboto';
+ //   font-style: italic;
+ //   font-weight: 400;
+ //   src: local('Roboto Italic'), local('Roboto-RegularItalic'), url('assets/fonts/Roboto-RegularItalic.ttf') format('truetype');
+ // }
+ 
+ @font-face {
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 500;
+   src: local('Roboto Medium'), local('Roboto-Medium'), url('assets/fonts/Roboto-Medium.ttf') format('truetype');
+ }
+ @font-face {
+   font-family: 'Roboto';
+   font-style: italic;
+   font-weight: 500;
+   src: local('Roboto Medium Italic'), local('Roboto-MediumItalic'), url('assets/fonts/Roboto-MediumItalic.ttf') format('truetype');
+ }
+ 
+ @font-face {
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 700;
+   src: local('Roboto Bold'), local('Roboto-Bold'), url('assets/fonts/Roboto-Bold.ttf') format('truetype');
+ }
+ 
+ @font-face {
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 900;
+   src: local('Roboto Black'), local('Roboto-Black'), url('assets/fonts/Roboto-Black.ttf') format('truetype');
+ }
+ @font-face {
+   font-family: 'Roboto';
+   font-style: italic;
+   font-weight: 900;
+   src: local('Roboto Black Italic'), local('Roboto-BlackItalic'), url('assets/fonts/Roboto-BlackItalic.ttf') format('truetype');
+ }
+ 
+ 
+ 
+ /**
+  * Font family (Material Icons)
+  *
+  * https://material.io/icons/
+  */
+ 
+ @font-face {
+   font-family: 'Material Icons';
+   font-style: normal;
+   font-weight: 400;
+   src: local('Material Icons'),
+     local('MaterialIcons-Regular'),
+     url('assets/fonts/MaterialIcons-Regular.woff2') format('woff2'),
+     url('assets/fonts/MaterialIcons-Regular.woff') format('woff'),
+     url('assets/fonts/MaterialIcons-Regular.ttf') format('truetype');
+ }
+
+ *{
+   font-family: 'Roboto'
+ }
+
+ .material-icons {
+   font-family: 'Material Icons';
+   font-weight: normal;
+   font-style: normal;
+   font-size: 24px;
+   /* Preferred icon size */
+   display: inline-block;
+   line-height: 1;
+   text-transform: none;
+   letter-spacing: normal;
+   word-wrap: normal;
+   white-space: nowrap;
+   direction: ltr;
+   /* Support for all WebKit browsers. */
+   -webkit-font-smoothing: antialiased;
+   /* Support for Safari and Chrome. */
+   text-rendering: optimizeLegibility;
+   /* Support for Firefox. */
+   -moz-osx-font-smoothing: grayscale;
+   /* Support for IE. */
+   font-feature-settings: 'liga';
+ }

@@ -1,0 +1,47 @@
+@import "../../../themes/defaults.scss";
+
+$img_move_size: (
+  default: 25px,
+  xxs: 25px,
+  xs: 25px,
+  sm: 55px,
+  md: 150px,
+  lg: 150px,
+  xl: 150px,
+  xxl: 150px
+) !default;
+
+.content {
+  padding: 12px;
+}
+
+.names-input {
+  padding-right: 30px;
+}
+
+mat-card-content, mat-card-actions {
+  text-align: center;
+}
+
+.rounds_score {
+  padding-bottom: 16px;
+}
+
+.img_move {
+  @include responsive-rule(height, $img_move_size);
+  @include responsive-rule(width, $img_move_size);
+
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  cursor: pointer;
+}
+
+mat-grid-list.moves {
+  mat-grid-tile.active {
+    border: 1px solid grey;
+  }
+}
+
+.btnRouter {
+  margin-bottom: 12px;
+}

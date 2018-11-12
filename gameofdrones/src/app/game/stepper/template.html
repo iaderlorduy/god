@@ -1,0 +1,104 @@
+<div [ngSwitch]="game.currentStep" class="content">
+  <a routerLink="history" mat-flat-button class="btnRouter" color="primary">See Match History</a>
+  <mat-card *ngSwitchCase="1">
+    <mat-card-header>
+      <mat-card-title>
+        <h2>Enter player's names</h2>
+      </mat-card-title>
+      <mat-card-subtitle>
+        The game of Rock, Paper, Scissors is very simple. Each player picks one of the three objects and these rules
+        are applied to see who has won that round:
+        Paper wraps (beats) Rock
+        Scissors cut (beat) Paper
+        Rock blunts (beats) Scissors
+        The challenge of the game is to guess what your opponent will choose and pick the appropriate object to beat
+        them.
+      </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <form [formGroup]="namesForm">
+
+        <mat-form-field class="names-input">
+          <input matInput placeholder="Enter player 1 name" formControlName="player1Name">
+        </mat-form-field>
+
+        <mat-form-field class="names-input">
+          <input matInput placeholder="Enter player 2 name" formControlName="player2Name">
+        </mat-form-field>
+
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" type="submit" (click)="onSubmit()" [disabled]="!namesForm.valid">START</button>
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-card *ngSwitchCase="2">
+    <mat-card-header>
+      <mat-card-title>
+        <h2>Round #{{game.round}}</h2>
+      </mat-card-title>
+      <mat-card-subtitle>
+        <div *ngIf="game.playerPlaying == 1">
+          Turn of player 1 : <b>{{game.player1Name}}</b>, make your move
+        </div>
+        <div *ngIf="game.playerPlaying == 2">
+          Turn of player 2 : <b>{{game.player2Name}}</b>, make your move
+        </div>
+      </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-grid-list class="moves" cols="3" rowHeight="2:1">
+        <mat-grid-tile [ngClass]="{'active' : move == 'rock'}">
+          <img (click)="move = 'rock'" class="img_move" mat-card-image src="../../../assets/images/if_hand-rock-o_1608372.png"
+            alt="rock icon">
+        </mat-grid-tile>
+        <mat-grid-tile [ngClass]="{'active' : move == 'paper'}">
+          <img (click)="move = 'paper'" class="img_move" mat-card-image src="../../../assets/images/if_hand-stop-o_1608369.png"
+            alt="papel icon">
+        </mat-grid-tile>
+        <mat-grid-tile [ngClass]="{'active' : move == 'scissors'}">
+          <img (click)="move = 'scissors'" class="img_move" mat-card-image src="../../../assets/images/if_hand-scissors-o_1608371.png"
+            alt="scissors icon">
+        </mat-grid-tile>
+      </mat-grid-list>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="setMove(move, game.playerPlaying, game.round)" [disabled]="!move">PLAY</button>
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-card *ngSwitchCase="3">
+    <mat-card-header>
+      <mat-card-title>
+        <h2>WINNER</h2>
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      PLAYER WINNER IS {{game.playerWinner}}
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="playAgain()">PLAY AGAIN</button>
+    </mat-card-actions>
+  </mat-card>
+  <br>
+  <div *ngIf="game.currentStep != 1">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 rounds_score" *ngFor="let s of score; let i = index">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>
+              <h2>Round {{i + 1}}</h2>
+            </mat-card-title>
+          </mat-card-header>
+          <mat-card-content style="text-align: left">
+            <p>Move player 1: {{s.moveplayer1}}</p>
+            <p>Move player 2: {{s.moveplayer2}}</p>
+            <p>Move winner: {{s.moveWinner}}</p>
+            <p>Winner: {{s.playerWinner}}</p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
