@@ -37,3 +37,14 @@ $table_sm_display: (
 .table_sm {
   @include responsive-rule(display, $table_sm_display);
 }
+
+mat-grid-list.records_header {
+  font-size: .95rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.54);
+  border-bottom: 1px solid #8080802b;
+}
+
+mat-grid-list.records {
+  border-bottom: 1px solid #8080802b;
+}

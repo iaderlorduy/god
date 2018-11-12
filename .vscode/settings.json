@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/b2af3078-9bd4-4172-826c-19544f7901a0/resourceGroups/v1frontapp/providers/Microsoft.Web/sites/v1frontapp",
+    "appService.deploySubpath": "gameofdrones\\dist\\gameofdrones"
+}

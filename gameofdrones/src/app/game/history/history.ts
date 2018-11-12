@@ -3,6 +3,8 @@ import { GameService } from '../../../modules/services/module';
 import { List } from 'immutable';
 import { Store } from '@ngrx/store';
 import { AppState, Match } from '../../../modules/models/game';
+import * as gameActions from 'src/modules/actions/game';
+import { Router } from '@angular/router';
 
 @Component({
   templateUrl: './template.html',
@@ -16,7 +18,8 @@ export class HistoryComponent implements OnInit {
 
   constructor(
     readonly service: GameService,
-    private store: Store<AppState>
+    private store: Store<AppState>,
+    private router: Router,
   ) {
   } 
 
@@ -34,5 +37,10 @@ export class HistoryComponent implements OnInit {
         console.log(matchs);
       }
     )
+  }
+
+  play(){
+    this.store.dispatch(new gameActions.PlayAgain({}));
+    this.router.navigateByUrl("/");
   }
 }

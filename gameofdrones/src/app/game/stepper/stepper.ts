@@ -44,6 +44,9 @@ export class StepperComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.score = List();
+    this.move = undefined;
+    this.namesForm.reset(); 
     this.stateSubscription = this.game$.subscribe((store: GameStore) => {
       this.game = store;
     });
