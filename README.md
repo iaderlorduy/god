@@ -44,6 +44,6 @@ For the BackEnd we created a Node JS Empty Web App and the deployment is automat
 
 For the Frontend we create a basic web app and the deployment is manually with azure extension for VScode.
 
-#You can check the app in a live server -> https://v1frontapp.azurewebsites.net/#/game
+# You can check the app in a live server -> https://v1frontapp.azurewebsites.net/#/game
 
 
